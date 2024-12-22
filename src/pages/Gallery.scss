@@ -1,0 +1,99 @@
+// src/pages/Gallery.scss
+.gallery {
+    text-align: center;
+    padding: 3rem 0;
+    background:linear-gradient(90deg, #005f73, #0a9396);
+  
+    h2 {
+      font-size: 2.5rem;
+      color: #004d40; /* Base green color */
+      margin-bottom: 2rem;
+      font-weight: bold;
+    }
+  
+    .carousel-item {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+  
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: 300px; /* Fixed height for consistent viewport size */
+      overflow: hidden;
+    }
+  
+    .gallery-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures image stretches to fit container without distortion */
+    }
+  
+    .image-description {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 1.2rem;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  
+    .carousel-item:hover .image-description {
+      opacity: 1; /* Show description on hover */
+    }
+  
+    /* Styling for carousel navigation dots */
+    .slick-dots {
+      bottom: 10px;
+    }
+  
+    .slick-dots li button {
+      background-color: #81c784; /* Light green for dots */
+    }
+  
+    .slick-dots li.slick-active button {
+      background-color: #004d40; /* Dark green when active */
+    }
+  
+    .slick-prev, .slick-next {
+      z-index: 1;
+    }
+  }
+  
+  /* Responsive design for Gallery */
+  @media (max-width: 1024px) { // Medium screens
+    .gallery h2 {
+      font-size: 2rem;
+    }
+  
+    .image-description {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) { // Small screens
+    .gallery h2 {
+      font-size: 1.8rem;
+    }
+  
+    .image-description {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) { // Extra small screens
+    .gallery h2 {
+      font-size: 1.5rem;
+    }
+  
+    .image-description {
+      font-size: 0.8rem;
+    }
+  }
+  
